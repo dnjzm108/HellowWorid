@@ -1,0 +1,107 @@
+git branch bugFix
+git checkout bugFix
+
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git merge bugFix
+
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git checkout bugFix
+git rebase main
+
+
+
+git checkout C1;
+git checkout main ;
+git commit
+git checkout C2
+
+
+
+git 2-3
+
+git branch -f bugFix c0
+git checkout HEAD^
+git branch -f main c6
+
+2-4
+
+git branch -f local main
+git checkout pushed
+git revert pushed
+
+
+3-1
+git cherry-pick 
+
+3-2
+git rebase -i HEAD~4  or git rebase -i overHere 
+
+/*
+    rebase
+    Cheery-pick
+    Interactive Rebase (  Rebasse -i )
+   
+    종합선물세트
+    1번문제
+        1. git checkout main
+        2. git cheery-pick c4
+    2번문제
+
+        rebase -i 와
+        git commit --amend 활용하기 
+        git rebase -i main 
+        git commit --amend 
+        git rebase -i main
+        git branch -f main caption
+
+        
+        이번에도 꽤 자주 발생하는 상황입니다. newImage와 caption 브랜치에 각각의 변경내역이 있고 서로 약간 관련이 있어서, 저장소에 차례로 쌓여있는 상황입니다.
+
+        때로는 이전 커밋의 내용을 살짝 바꿔야하는 골치아픈 상황에 빠지게 됩니다. 이번에는 디자인 쪽에서 우리의 작업이력(history)에서는 이미 한참 전의 커밋 내용에 있는 newImage의 크기를 살짝 바꿔 달라는 요청이 들어왔습니다.
+        
+        
+        git rebase -i 명령으로 우리가 바꿀 커밋을 가장 최근 순서로 바꾸어 놓습니다
+git commit --amend 명령으로 커밋 내용을 정정합니다
+다시 git rebase -i 명령으로 이 전의 커밋 순서대로 되돌려 놓습니다
+마지막으로, main을 지금 트리가 변경된 부분으로 이동합니다. (편하신 방법으로 하세요)
+
+    3번문제 
+        git checkout main
+        git cherry-pcik c2
+        git checkout c1
+        git branch -f main c1
+        git cherry-pick c2'
+        git cherry-pick c3
+    4번문제
+        tag 문제
+        git tag v1 c2
+        git tag v0 c1
+        git checkout c2
+    5번문제
+        Git describe 형태
+        git describe <ref>
+        Result : <tag>_<numCommits>_g<hash>
+        
+    9천번넘는 rebase 
+    1번 문제 노가다문제!
+            or rebase 인자값  고정값 가져올값.
+     
+            git rebase main bugFix
+            git rebase bugFix side
+            git rebase sdie another
+            git branch -f main another
+    2번 문제 다수부모
+         git branch -f bugWork HEAD~^2^
+    3번 브랜치 스파게티
+        git checkout one
+        git chreey-pick c4 c3 c2
+        git checkout two
+        git chreey-pick c5 c4 c3 c2
+        git branch -f three c2
+*/

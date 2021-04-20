@@ -1,0 +1,19 @@
+{
+  "name": "420",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chokidar": "^3.5.1",
+    "expess": "0.0.1-security",
+    "express": "^4.17.1",
+    "exprss": "0.0.1-security",
+    "nunjucks": "^3.2.3"
+  }
+}
